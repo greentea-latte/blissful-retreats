@@ -57,7 +57,6 @@ if (userPasswordForm)
     document.getElementById('password-confirm').value = '';
   });
 
-window.onload= function (){
 
   bookBtn.addEventListener('click', e => {
     const { retreatId } = e.target.dataset;
@@ -95,9 +94,7 @@ window.onload= function (){
 });
 
   bookBtnEight.addEventListener('click', e => {
-const { retreatId } = e.target.dataset;
-bookRetreat(retreatId);
+    const { retreatId } = e.target.dataset;
+    bookRetreat(retreatId);
 });
-
-}
 
