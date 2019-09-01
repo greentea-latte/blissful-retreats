@@ -7,6 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 
 const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
@@ -15,13 +16,24 @@ const userRouter = require('./routers/userRouter');
 const reviewRouter = require('./routers/reviewRouter');
 const viewRouter = require('./routers/viewRouter');
 const bookingRouter = require('./routers/bookingRouter');
+const bookingController = require('./controllers/bookingController');
 
+// Start express app
 const app = express();
+
+app.enable('trust proxy');
 
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
 // 1) GLOBAL MIDDLEWARES
+// Implement CORS
+app.use(cors());
+
+
+app.options('*', cors());
+// app.options('/api/v1/retreats/:id', cors());
+
 // Serving static files
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -41,6 +53,13 @@ const limiter = rateLimit({
 });
 app.use('/api', limiter);
 
+// Stripe webhook, BEFORE body-parser, because stripe needs the body as stream
+// app.post(
+//   '/webhook-checkout',
+//   bodyParser.raw({ type: 'application/json' }),
+//   bookingController.webhookCheckout
+// );
+
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
@@ -55,14 +74,19 @@ app.use(xss());
 // Prevent parameter pollution
 app.use(
   hpp({
-    whitelist: ['duration', 'price']
+    whitelist: [
+      'duration',
+      'price'
+    ]
   })
 );
+
+// app.use(compression());
 
 // Test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
-  console.log(req.cookies);
+  // console.log(req.cookies);
   next();
 });
 
