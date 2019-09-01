@@ -1,0 +1,173 @@
+
+[
+  {
+  "ratingsTotal": 10,
+  "ratingsAverage": 3.5,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-04-25,10:00","2021-07-20,10:00","2021-10-05,10:00"],
+  "id": 0,
+  "name": "Mountain Yoga",
+  "price": 523,
+  "duration": 7,
+  "capacity": 30,
+  "summary": "Relax your body and soul in the calm mountains of Vancouver",
+  "imageMain": "yoga1.jpg",
+  "location": {
+    "coordinates": [49.852620, -123.004774],
+    "address": "Mt. Garibaldi, British Columbia, Canada"
+    }
+  },
+  {
+  "ratingsTotal": 10,
+  "ratingsAverage": 4.5,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-04-25,10:00","2021-07-20,10:00","2021-10-05,10:00"],
+  "id": 1,
+  "name": "Lakeside meditation",
+  "price": 323,
+  "duration": 5,
+  "capacity": 25,
+  "summary": "Take some time for yourself and become aquainted with your breath in the beautiful island of Maui",
+  "imageMain": "meditation.jpg",
+  "location": {
+    "coordinates": [20.898116, -156.653694],
+    "address": "Lahaina, Maui, Hawaii, USA"
+    }
+  },
+  {
+  "ratingsTotal": 30,
+  "ratingsAverage": 5,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-03-25,10:00","2021-5-05,10:00"],
+  "id": 2,
+  "name": "Yoga and Vegan cooking",
+  "price": 423,
+  "duration": 5,
+  "capacity": 20,
+  "summary": "Take some time for yourself and become aquainted with your breath in the beautiful island of Maui",
+  "imageMain": "cooking.jpeg",
+    "location": {
+    "coordinates": [20.898116, -156.653694],
+    "address": "Lahaina, Maui, Hawaii, USA"
+    }
+  },
+  {
+  "ratingsTotal": 30,
+  "ratingsAverage": 4.5,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-03-25,10:00","2021-5-05,10:00"],
+  "id": 3,
+  "name": "Hiking and Yoga",
+  "price": 403,
+  "duration": 5,
+  "capacity": 20,
+  "summary": "Let's explore the beautiful island of fiji and also relax our bodies with yoga",
+  "imageMain": "yoga1.jpg",
+  "location": {
+    "coordinates": [-17.678013, 177.598960],
+    "address": "Koroyanitu National Park, Vuda, Fiji"
+    }
+  },
+  {
+  "ratingsTotal": 50,
+  "ratingsAverage": 5,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-06-25,10:00","2021-8-05,10:00"],
+  "id": 4,
+  "name": "Forest Escape",
+  "price": 430,
+  "duration": 5,
+  "capacity": 20,
+  "summary": "Escape to the beautiful island of Oahu and enjoy daily yoga and painting classes",
+  "imageMain": "image.jpeg",
+  "location": {
+    "coordinates": [21.573451, -158.169437],
+    "address": "North Shore, Waialua, Hawaii, USA"
+    }
+  },
+  {
+  "ratingsTotal": 50,
+  "ratingsAverage": 5,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-06-25,10:00","2021-8-05,10:00"],
+  "id": 5,
+  "name": "Sea breeze meditation",
+  "price": 430,
+  "duration": 5,
+  "capacity": 20,
+  "summary": "Escape to the beautiful island of Oahu and enjoy daily yoga and meditation",
+  "imageMain": "meditation.jpg",
+  "location": {
+    "coordinates": [21.573451, -158.169437],
+    "address": "North Shore, Waialua, Hawaii, USA"
+    }
+  },
+  {
+  "ratingsTotal": 50,
+  "ratingsAverage": 5,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-08-25,10:00","2021-9-05,10:00", "2021-10-05,10:00"],
+  "id": 6,
+  "name": "Sunshine Yoga",
+  "price": 430,
+  "duration": 5,
+  "capacity": 20,
+  "summary": "Escape to the beautiful island of Oahu and enjoy daily yoga and meditation",
+  "imageMain": "yoga1.jpg",
+  "location": {
+    "coordinates": [21.573451, -158.169437],
+    "address": "North Shore, Waialua, Hawaii, USA"
+    }
+  },
+  {
+  "ratingsTotal": 30,
+  "ratingsAverage": 4.5,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-03-25,10:00","2021-5-05,10:00"],
+  "id": 7,
+  "name": "Painting in Paradise",
+  "price": 423,
+  "duration": 7,
+  "capacity": 20,
+  "summary": "Enjoy a relaxing week painting landscapes, cooking and exploring the island of Fiji",
+  "imageMain": "hiking.jpg",
+  "location": {
+    "coordinates": [-17.678013, 177.598960],
+    "address": "Koroyanitu National Park, Vuda, Fiji"
+    }
+  },
+  {
+  "ratingsTotal": 10,
+  "ratingsAverage": 4.7,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-04-25,10:00","2021-07-20,10:00","2021-10-05,10:00"],
+  "id": 8,
+  "name": "The laws of attraction",
+  "price": 323,
+  "duration": 5,
+  "capacity": 25,
+  "summary": "Enjoy workshops, meditation classes and yoga on the beautiful port city of Porto",
+  "imageMain": "yoga2.jpg",
+  "location": {
+    "coordinates": [41.158624, -8.684688],
+    "address": "Porto, Portugal"
+    }
+  },
+  {
+  "ratingsTotal": 39,
+  "ratingsAverage": 3.7,
+  "images": ["image1", "image2"],
+  "startDate": ["2021-04-25,10:00","2021-07-20,10:00","2021-10-05,10:00"],
+  "id": 9,
+  "name": "Let's be mindful",
+  "price": 323,
+  "duration": 5,
+  "capacity": 25,
+  "summary": "Enjoy workshops, meditation classes and yoga on the beautiful port city of Porto",
+  "imageMain": "meditation.jpg",
+  "location": {
+    "coordinates": [41.158624, -8.684688],
+    "address": "Porto, Portugal"
+    }
+  }
+]

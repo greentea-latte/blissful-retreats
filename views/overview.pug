@@ -1,0 +1,126 @@
+extends base
+
+block content
+
+  include _header
+
+
+  section#section-retreats
+    h2.heading-tertiary Our Retreats
+    .card-container
+
+        .card
+          .card__header
+            .card__picture-1
+            .card__details
+              h4.card__sub-heading Mountain Yoga
+              p.card__text Relax your body and soul in the calm mountains of Vancouver
+                span 25 people <br />
+
+                    if user
+                      .book-retreats
+                      btn.book-retreat(data-retreat-id='5d6295c662535a058c47ff01') Book now
+                    else
+                      a.btn(href='/login') Login to book
+        .card
+          .card__header
+            .card__picture-2
+            .card__details
+              h4.card__sub-heading Lakeside Meditation
+              p.card__text Take some time for yourself and become aquainted with your breath in the beautiful island of Maui
+                span 25 people <br />
+
+                    if user
+                      .book-retreats
+                      btn.book-retreat-2(data-retreat-id='5d6295c662535a058c47ff02') Book now
+                    else
+                      a.btn(href='/login') Login to book
+
+        .card
+          .card__header
+            .card__picture-3
+            .card__details
+              h4.card__sub-heading Hiking and Yoga
+              p.card__text Let's explore the beautiful island of fiji and also relax our bodies with yoga
+                span 25 people <br />
+
+                    if user
+                      .book-retreats
+                      btn.book-retreat-3(data-retreat-id='5d6295c662535a058c47ff04') Book now
+                    else
+                      a.btn(href='/login') Login to book
+
+        .card
+          .card__header
+            .card__picture-4
+            .card__details
+              h4.card__sub-heading Forest Escape
+              p.card__text Escape to the beautiful island of Oahu and enjoy daily yoga and painting classes
+                span 25 people <br />
+
+                    if user
+                      .book-retreats
+                      btn.book-retreat-4(data-retreat-id='5d6295c662535a058c47ff05') Book now
+                    else
+                      a.btn(href='/login') Login to book
+
+        .card
+          .card__header
+            .card__picture-5
+            .card__details
+              h4.card__sub-heading Yoga and Vegan cooking
+              p.card__text Take some time for yourself and become aquainted with your breath in the beautiful island of Maui
+                span 25 people <br />
+
+                     if user
+                      .book-retreats
+                        btn.book-retreat-5(data-retreat-id='5d6295c662535a058c47ff03') Book now
+                     else
+                        a.btn(href='/login') Login to book
+
+        .card
+          .card__header
+            .card__picture-6
+            .card__details
+              h4.card__sub-heading Yoga and Vegan cooking
+              p.card__text Take some time for yourself and become aquainted with your breath in the beautiful island of Maui
+                span 25 people <br />
+
+                    if user
+                      .book-retreats
+                        btn.book-retreat-6(data-retreat-id='5d6295c662535a058c47ff05') Book now
+                    else
+                        a.btn(href='/login') Login to book
+
+        .card
+          .card__header
+            .card__picture-7
+            .card__details
+              h4.card__sub-heading West Coast Mountain Yoga
+              p.card__text Relax your body and soul in the calm mountains of Vancouver
+                span 25 people <br />
+
+                    if user
+                      .book-retreats
+                      btn.book-retreat-7(data-retreat-id='5d6295c662535a058c47ff01') Book now
+                    else
+                      a.btn(href='/login') Login to book
+
+        .card
+          .card__header
+            .card__picture-8
+            .card__details
+              h4.card__sub-heading Hiking and Yoga
+              p.card__text Let's explore the beautiful island of fiji and also relax our bodies with yoga
+                span 25 people <br />
+
+                    if user
+                      .book-retreats
+                      btn.book-retreat-8(data-retreat-id='5d6295c662535a058c47ff04') Book now
+                    else
+                      a.btn(href='/login') Login to book
+
+  footer.footer
+    p Copyright to Lila Liu 2019
+
+
