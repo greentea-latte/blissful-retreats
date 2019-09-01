@@ -36,6 +36,9 @@ process.on('unhandledRejection', err => {
   });
 });
 
+// heroku omits signterm signal every 24 hours to check on our app health
+// it can leave processes hanging in the air
+
 process.on('SIGTERM', () => {
   console.log('👋 SIGTERM RECEIVED. Shutting down gracefully');
   server.close(() => {

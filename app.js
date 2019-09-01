@@ -21,6 +21,7 @@ const bookingController = require('./controllers/bookingController');
 // Start express app
 const app = express();
 
+// heroku acts as a proxy and redirects
 app.enable('trust proxy');
 
 app.set('view engine', 'pug');
