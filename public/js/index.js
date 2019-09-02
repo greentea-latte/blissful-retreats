@@ -3,7 +3,7 @@ import { login, logout } from './login';
 import { updateSettings } from './updateSettings';
 import '@babel/polyfill';
 import { bookRetreat } from './stripe';
-
+import { showAlert } from './alerts';
 
 // DOM ELEMENTS
 const loginForm = document.querySelector('.form--login');
@@ -98,3 +98,5 @@ if (userPasswordForm)
     bookRetreat(retreatId);
 });
 
+const alertMessage = document.querySelector('body').dataset.alert;
+if (alertMessage) showAlert('success', alertMessage, 20);
