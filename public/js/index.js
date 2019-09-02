@@ -10,6 +10,7 @@ const loginForm = document.querySelector('.form--login');
 const logOutBtn = document.querySelector('.nav__el--logout');
 const userDataForm = document.querySelector('.form-user-data');
 const userPasswordForm = document.querySelector('.form-user-password');
+// manipulating each DOM element due to issue looping in PUG
 const bookBtn = document.querySelector('.book-retreat');
 const bookBtnTwo = document.querySelector('.book-retreat-2');
 const bookBtnThree = document.querySelector('.book-retreat-3');
@@ -57,7 +58,7 @@ if (userPasswordForm)
     document.getElementById('password-confirm').value = '';
   });
 
-
+// manipulating each DOM element due to issue looping in PUG
   bookBtn.addEventListener('click', e => {
     const { retreatId } = e.target.dataset;
     bookRetreat(retreatId);

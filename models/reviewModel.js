@@ -33,7 +33,7 @@ const reviewSchema = new mongoose.Schema(
   }
 );
 
-// each combination of tour and user is unique
+// each combination of retreat and user is unique
 reviewSchema.index({ retreat: 1, user: 1 }, { unique: true });
 
 reviewSchema.pre(/^find/, function(next) {
