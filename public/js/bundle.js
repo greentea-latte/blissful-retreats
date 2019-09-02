@@ -8524,7 +8524,7 @@ function () {
           case 0:
             _context.prev = 0;
             _context.next = 3;
-            return (0, _axios.default)("/api/v1/bookings/checkout-session/".concat(tourId));
+            return (0, _axios.default)("/api/v1/bookings/checkout-session/".concat(retreatId));
 
           case 3:
             session = _context.sent;
@@ -8959,7 +8959,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63598" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64357" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
