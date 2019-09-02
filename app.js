@@ -7,7 +7,7 @@ const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
-// const bodyParser = require('body-parser');
+// const compression = require('compression');
 const cors = require('cors');
 
 const AppError = require('./utils/appError');
@@ -15,14 +15,13 @@ const globalErrorHandler = require('./controllers/errorController');
 const retreatRouter = require('./routers/retreatRouter');
 const userRouter = require('./routers/userRouter');
 const reviewRouter = require('./routers/reviewRouter');
-const viewRouter = require('./routers/viewRouter');
 const bookingRouter = require('./routers/bookingRouter');
 const bookingController = require('./controllers/bookingController');
+const viewRouter = require('./routers/viewRouter');
 
 // Start express app
 const app = express();
 
-// heroku acts as a proxy and redirects
 app.enable('trust proxy');
 
 app.set('view engine', 'pug');
@@ -31,7 +30,11 @@ app.set('views', path.join(__dirname, 'views'));
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
 app.use(cors());
-
+// Access-Control-Allow-Origin *
+// api.naretreats.com, front-end naretreats.com
+// app.use(cors({
+//   origin: 'https://www.naretreats.com'
+// }))
 
 app.options('*', cors());
 // app.options('/api/v1/retreats/:id', cors());
@@ -54,8 +57,6 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again in an hour!'
 });
 app.use('/api', limiter);
-
-
 
 // Stripe webhook, BEFORE body-parser, because stripe needs the body as stream
 app.post(

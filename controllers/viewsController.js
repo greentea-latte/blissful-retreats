@@ -49,6 +49,20 @@ exports.getLoginForm = (req, res) => {
   });
 };
 
+exports.getMyRetreats = catchAsyncErr(async (req, res, next) => {
+  // 1) Find all bookings
+  const bookings = await Booking.find({ user: req.user.id });
+
+  // 2) Find tours with the returned IDs
+  const retreatIDs = bookings.map(el => el.retreats);
+  const retreats = await Retreat.find({ _id: { $in: retreatIDs } });
+
+  res.status(200).render('overview', {
+    title: 'My retreats',
+    retreats
+  });
+});
+
 exports.getAccount = (req, res) => {
   res.status(200).render('account', {
     title: 'Your account'
